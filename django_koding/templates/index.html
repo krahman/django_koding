@@ -1,0 +1,28 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <link rel="stylesheet" href="https://cdn.jsdelivr.net/npm/uikit@3.4.4/dist/css/uikit.min.css" />
+    <title>Belajar Koding</title>
+</head>
+<body>
+    <div class="uk-container">
+        {%  for post in posts %}
+        <div class="uk-card">
+            <div class="uk-card-title">
+                {{ post.title }}
+            </div>
+            <div class="uk-card-content">
+                <img
+                    width="600px"
+                    height="600px"
+                    src="{{ post.image.url }}"
+                    alt=""
+                    uk-img
+                >
+            </div>
+        </div>
+        {% endfor %}
+    </div>
+</body>
+</html>
